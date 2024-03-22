@@ -1,7 +1,8 @@
+## Question 3
 def caesar_reverse(text, shift):
     newstr = ""
     for char in text:
-        if char.upper() not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+        if not char.isalpha():
             newstr += char
             continue
         new_char = chr(((ord(char.upper()) - ord('A') - int(shift)) % 26) + ord('A'))
