@@ -1,0 +1,22 @@
+## Question 2
+## Variables
+height = None
+total = 0
+count = 0
+
+## Inputs
+while height != "quit":
+    height = input("Enter height (in m), or 'quit' to exit: ")
+    if height == "quit":  ## If quit then exit the loop
+        break  
+    else:
+        total += float(height) ## adding height to total immediately
+    count += 1                 ## counting number of people
+
+## Calculation and printing results
+if total == 0:
+    print("There is no input.") ## Nothing added
+else:
+    mean = round(total / count, 2) ## mean height formula
+    print(f"The mean height of the {count} people is {mean} m (2 dp).") ## Mean height printed
+
