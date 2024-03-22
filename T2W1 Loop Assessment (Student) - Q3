@@ -1,0 +1,14 @@
+def caesar_reverse(text, shift):
+    newstr = ""
+    for char in text:
+        if char.upper() not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+            newstr += char
+            continue
+        new_char = chr(((ord(char.upper()) - ord('A') - int(shift)) % 26) + ord('A'))
+        newstr += new_char
+    return newstr
+
+def main():
+    print(caesar_reverse(input("Enter text: "), input("Enter shift: ")))
+
+main()
