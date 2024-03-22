@@ -1,0 +1,13 @@
+# Question 1
+## Inputs
+curr_amt = float(input("Enter the bank amount ($): "))
+int_rate = float(input("Enter the monthly interest rate (%): "))
+
+## Printing out balance by month
+for i in range(12):
+    new_bal = curr_amt + (curr_amt * (int_rate / 100)) ## Calculate the balance after new month
+    bal = str(round(new_bal, 2))
+    while len(bal.split(".")[1]) != 2: ## Adding 0s behind if balance not in 2dp format
+        bal += "0"
+    print(f"{i + 1}: {bal}") ## Printing out the month and the corresponding balance
+    curr_amt = new_bal  ## Init the new balance into the "current balance" for next month
