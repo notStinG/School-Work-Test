@@ -5,7 +5,7 @@ def caesar_reverse(text, shift):
         if not char.isalpha():
             newstr += char
             continue
-        new_char = chr(((ord(char.upper()) - ord('A') - int(shift)) % 26) + ord('A'))
+        new_char = chr(((ord(char.upper()) - ord('A') + int(shift)) % 26) + ord('A'))
         newstr += new_char
     return newstr
 
